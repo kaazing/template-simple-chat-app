@@ -1,0 +1,146 @@
+<!--
+
+    Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+
+-->
+<gateway-config xmlns="http://xmlns.kaazing.com/2012/09/gateway">
+
+  <!-- DMZ Configuration -->
+
+  <!-- ===================================================================== -->
+
+  <properties>
+
+    <!-- The IP address of this cluster member. -->
+    <property>
+      <name>gateway.ip.address</name>
+      <value>172.19.20.1</value>
+    </property>
+
+    <!-- Must be different for each member. -->
+    <property>
+      <name>cluster.port</name>
+      <value>5941</value>
+    </property>
+
+    <!-- The publicly addressable hostname. -->
+    <property>
+      <name>dmz.frontplane.hostname</name>
+      <value>gateway1.example.com</value>
+    </property>
+
+    <!-- The private address that the internal gateway connects to. -->
+    <property>
+      <name>dmz.backplane.hostname</name>
+      <value>gateway1.example.dmz.net</value>
+    </property>
+
+  </properties>
+
+  <!-- ===================================================================== -->
+
+  <cluster>
+    <name>dmzCluster</name>
+    <accept>tcp://${gateway.ip.address}:${cluster.port}</accept>
+    <connect>udp://224.2.2.44:44444</connect>
+  </cluster>
+
+  <!-- ===================================================================== -->
+
+  <service>
+    <name>Balancer for DMZ App1</name>
+    <accept>wss://gateway.example.com:8443/app1</accept>
+    <type>balancer</type>
+    <accept-options>
+      <tcp.bind>${gateway.ip.address}:8443</tcp.bind>
+    </accept-options>
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+
+  <!-- ===================================================================== -->
+
+  <service>
+
+    <name>DMZ App1</name>
+
+    <accept>wss://${dmz.frontplane.hostname}:8443/app1</accept>
+
+    <connect>wss://gateway.example.com:8443/app1</connect>
+
+    <balance>wss://gateway.example.com:8443/app1</balance>
+
+    <type>proxy</type>
+
+    <connect-options>
+        <http.transport>socks://${dmz.backplane.hostname}:1080</http.transport>
+        <socks.mode>reverse</socks.mode>
+        <socks.timeout>2 seconds</socks.timeout>
+        <socks.transport>wsn://${dmz.backplane.hostname}:1080/shield</socks.transport>
+        <ws.inactivity.timeout>60 seconds</ws.inactivity.timeout>
+    </connect-options>
+
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+  <!-- ===================================================================== -->
+
+  <service>
+    <name>Balancer for DMZ App2</name>
+    <accept>wss://gateway.example.com:8443/app2</accept>
+    <type>balancer</type>
+    <accept-options>
+      <tcp.bind>${gateway.ip.address}:8443</tcp.bind>
+    </accept-options>
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+
+  <!-- ===================================================================== -->
+
+  <service>
+
+    <name>DMZ App2</name>
+
+    <accept>wss://${dmz.frontplane.hostname}:8443/app2</accept>
+
+    <connect>wss://gateway.example.com:8443/app2</connect>
+
+    <balance>wss://gateway.example.com:8443/app2</balance>
+
+    <type>proxy</type>
+
+    <connect-options>
+        <http.transport>socks://${dmz.backplane.hostname}:1080</http.transport>
+        <socks.mode>reverse</socks.mode>
+        <socks.timeout>2 seconds</socks.timeout>
+        <socks.transport>wsn://${dmz.backplane.hostname}:1080/shield</socks.transport>
+        <ws.inactivity.timeout>60 seconds</ws.inactivity.timeout>
+    </connect-options>
+
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+  <!-- ===================================================================== -->
+
+  <security>
+
+    <keystore>
+      <type>JCEKS</type>
+      <file>dmz.keystore</file>
+      <password-file>dmz.keystore.pw</password-file>
+    </keystore>
+
+  </security>
+
+  <!-- ===================================================================== -->
+
+</gateway-config>

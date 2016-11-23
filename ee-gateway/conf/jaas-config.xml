@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+    Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+
+-->
+<jaas-config xmlns="http://xmlns.kaazing.com/jaas-config/centurion" >
+
+  <user>
+    <name>joe</name>
+    <password>welcome</password>
+    <role-name>AUTHORIZED</role-name>
+  </user>
+
+  <user>
+    <name>admin</name>
+    <password>admin</password>
+    <role-name>ADMINISTRATOR</role-name>
+  </user>
+
+  <role>
+    <name>ADMINISTRATOR</name>
+    <description>Administrative users</description>
+  </role>
+
+  <role>
+    <name>AUTHORIZED</name>
+    <description>Authorized users</description>
+  </role>
+
+</jaas-config>

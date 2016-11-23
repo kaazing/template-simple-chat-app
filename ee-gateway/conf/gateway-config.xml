@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+    Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+
+-->
+<gateway-config xmlns="http://xmlns.kaazing.org/2016/06/gateway">
+
+  <!--
+  #############################################################################
+  #############################################################################
+
+                Kaazing WebSocket Gateway Configuration File
+
+    See Kaazing Documentation for details: http://kaazing.com/documentation
+
+  #############################################################################
+  #############################################################################
+  -->
+
+  <properties>
+
+    <property>
+      <name>gateway.hostname</name>
+      <value>localhost</value>
+    </property>
+
+    <property>
+      <name>gateway.port</name>
+      <value>8000</value>
+    </property>
+
+  </properties>
+
+
+  <service>
+    <name>welcome-directory</name>
+    <description>Directory service for welcome page</description>
+    <accept>http://${gateway.hostname}:${gateway.port}/</accept>
+
+    <type>directory</type>
+
+    <properties>
+      <directory>/welcome</directory>
+      <welcome-file>index.html</welcome-file>
+      <error-pages-directory>/error-pages</error-pages-directory>
+      <options>indexes</options>
+      <location>
+        <patterns>**/*</patterns>
+        <cache-control>max-age=0</cache-control>
+      </location>
+    </properties>
+  </service>
+
+
+  <service>
+    <name>echo</name>
+    <description>Simple echo service</description>
+    <accept>ws://${gateway.hostname}:${gateway.port}/echo</accept>
+
+    <type>echo</type>
+
+    <!-- Restrict cross site constraints before running in production -->
+    <cross-site-constraint>
+      <!-- * is not secure for production javascript applications -->
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+
+
+  <service>
+    <name>JMS Service</name>
+    <accept>ws://${gateway.hostname}:${gateway.port}/jms</accept>
+
+    <type>jms</type>
+
+    <properties>
+      <connection.factory.name>ConnectionFactory</connection.factory.name>
+      <context.lookup.topic.format>dynamicTopics/%s</context.lookup.topic.format>
+      <context.lookup.queue.format>dynamicQueues/%s</context.lookup.queue.format>
+      <env.java.naming.factory.initial>org.apache.activemq.jndi.ActiveMQInitialContextFactory</env.java.naming.factory.initial>
+      <env.java.naming.provider.url>tcp://${gateway.hostname}:61616</env.java.naming.provider.url>
+    </properties>
+
+    <realm-name>demo</realm-name>
+
+    <!-- "*" is not secure for javascript applications, change before running in production -->
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+
+
+  <service>
+    <name>AMQP Service</name>
+    <accept>ws://${gateway.hostname}:${gateway.port}/amqp</accept>
+    <connect>tcp://${gateway.hostname}:5672</connect>
+
+    <type>amqp.proxy</type>
+
+    <realm-name>demo</realm-name>
+
+    <!-- "*" is not secure for javascript applications, change before running in production -->
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+
+
+  <service>
+    <name>Update Checker</name>
+    <description>Checks to see if a newer version of the Gateway is available</description>
+    <type>update.check</type>
+  </service>
+
+
+  <security>
+
+    <keystore>
+      <type>JCEKS</type>
+      <file>keystore.db</file>
+      <password-file>keystore.pw</password-file>
+    </keystore>
+
+    <truststore>
+      <file>truststore.db</file>
+    </truststore>
+
+    <realm>
+      <name>demo</name>
+      <description>Sample realm for file-based authentication</description>
+
+      <authentication>
+        <http-challenge-scheme>Application Basic</http-challenge-scheme>
+        <login-modules>
+          <login-module>
+            <type>file</type>
+            <success>required</success>
+            <options>
+              <file>jaas-config.xml</file>
+            </options>
+          </login-module>
+        </login-modules>
+      </authentication>
+    </realm>
+
+  </security>
+
+
+</gateway-config>

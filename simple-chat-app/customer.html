@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Simple Customer / Agent Chat App - Customer</title>
+
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <form id="connection-details" class="form-inline">
+    <div class="form-group">
+      <label for="wsUrl">URL</label>
+      <input id="wsUrl" type="text" class="form-control" placeholder="ws://localhost:8000/customer">
+    </div>
+    <button id="connectBut" type="button" class="btn btn-default">Connect</button>
+    <button id="disconnectBut" type="button" class="btn btn-default">Disconnect</button>
+  </form>
+
+	<div class="container">
+
+	  <div id="upper">
+
+      <h3>Chat App (Customer)</h3>
+
+			<div class="row">
+
+				<div class="col-xs-3">
+
+					<input id="username" type="text" class="form-control" placeholder="Username">
+
+				</div>
+
+        <div class="col-xs-9 text-right">
+
+          <a href="#" id="connection-status" class="disconnected"></a>
+
+        </div>
+
+			</div> <!-- .row -->
+
+	  </div> <!-- #upper -->
+
+		<div class="row" id="conversation-box">
+
+			<div class="col-xs-12">
+
+				<div id="conversation">
+				</div>
+
+			</div>
+
+		</div> <!-- .row -->
+
+		<div class="row" id="sendMessageDetails">
+
+			<div class="col-xs-10">
+
+				<input id="sendMessage" type="text" class="form-control" placeholder="Type your message here">
+
+			</div>
+
+			<div class="col-xs-2">
+
+				<button id="sendMessageBut" type="button" class="btn btn-primary">Send</button>
+
+			</div>
+
+		</div> <!-- .row -->
+
+	</div> <!-- .container -->
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdn.kaazing.com/releases/enterprise.javascript.client/4.1.0/WebSocket.js"></script>
+	<script type="text/javascript" src="js/protocol-layer.js"></script>
+	<script type="text/javascript" src="js/simple-chat.js"></script>
+
+  <script type="text/javascript">
+
+  const getRole = function() {
+    return 'customer';
+  };
+
+  </script>
+
+</body>
+
+</html>

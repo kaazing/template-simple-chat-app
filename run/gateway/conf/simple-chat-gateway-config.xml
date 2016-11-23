@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gateway-config xmlns="http://xmlns.kaazing.org/2016/06/gateway">
+
+  <properties>
+
+    <property>
+      <name>gateway.hostname</name>
+      <value>localhost</value>
+    </property>
+
+    <property>
+      <name>gateway.port</name>
+      <value>8080</value>
+    </property>
+
+  </properties>
+
+
+  <service>
+    <name>simple-chat-http-resources</name>
+    <description>HTTP resources for Simple Chat app</description>
+    <accept>http://${gateway.hostname}:${gateway.port}/simple-chat</accept>
+
+    <type>directory</type>
+
+    <properties>
+      <directory>/</directory>
+      <welcome-file>index.html</welcome-file>
+      <error-pages-directory>/error-pages</error-pages-directory>
+      <options>indexes</options>
+      <location>
+        <patterns>**/*</patterns>
+        <cache-control>max-age=0</cache-control>
+      </location>
+    </properties>
+  </service>
+
+
+  <service>
+    <name>customer-service</name>
+    <accept>ws://${gateway.hostname}:${gateway.port}/customer</accept>
+    <connect>tcp://${gateway.hostname}:4445</connect>
+
+    <type>proxy</type>
+
+<!--     <realm-name>demo</realm-name>
+
+    <authorization-constraint>
+      <require-role>CUSTOMER</require-role>
+    </authorization-constraint>
+ -->
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+
+  <service>
+    <name>agent-service</name>
+    <accept>ws://${gateway.hostname}:${gateway.port}/agent</accept>
+    <connect>tcp://${gateway.hostname}:4445</connect>
+
+    <type>proxy</type>
+
+<!--     <realm-name>demo</realm-name>
+
+    <authorization-constraint>
+      <require-role>CUSTOMER</require-role>
+    </authorization-constraint>
+ -->
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+</gateway-config>

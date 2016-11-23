@@ -1,0 +1,118 @@
+KAAZING DEVELOPER LICENSE AGREEMENT
+
+Please read this Developer License Agreement ("Agreement") carefully before installing or using
+the software that Developer wishes to download and use (the "Software"). This is a legal
+agreement between you ("Developer") and Kaazing Corporation, a Delaware corporation
+("Kaazing"). By downloading, installing, or using the Software, you are agreeing to be bound by
+the terms of this Agreement, including the license terms that specify the permitted use of the
+Software. If you are downloading, installing, or using the Software on behalf of a company or
+other entity, you represent and warrant that you have the authority to bind such entity to this
+Agreement. If you do not agree with the terms and conditions of this Agreement, do not install
+or use the Software.
+
+1. DELIVERY. Subject to the terms and conditions of this Agreement, Kaazing will provide
+Developer with one copy of its Kaazing Enterprise Gateway Developer Edition software product
+(the "Software"). Developer will provide, at its own expense, all hardware, equipment, and third
+party software necessary to use the Software.
+
+2. TERM. This Agreement will begin on the day that the Software is provided to Developer and
+continue until terminated as set forth in Section 11 (the "Term").
+
+3. SOFTWARE LICENSE. Subject to the terms and conditions of this Agreement, Kaazing
+hereby grants to Developer a limited, non-exclusive, non-transferable license, without right of
+sublicense, to internally use the Software, without modification, solely for the purpose of
+developing and prototyping Developer's applications during the Term. Developer is prohibited
+from modifying, enhancing, or creating derivative works of the Software. This license will
+immediately terminate upon expiration or termination of this Agreement.
+
+4. OWNERSHIP. The Software is licensed, not sold, by Kaazing to Developer. Kaazing and its
+suppliers own and retain all right, title, and interest, including all intellectual property rights, in
+and to the Software, including any improvements, modifications, and enhancements to it. Except
+for those rights expressly granted in this Agreement, no other rights are granted, either express or
+implied, to Developer.
+
+5. PROHIBITED USES; AUDIT.
+
+(a) Developer may not: (i) remove or modify any software markings or any notice of
+Kaazing's proprietary rights; (ii) redistribute or make the programs available in any manner to
+any third party; (iii) cause or permit reverse engineering of or decompile the software; (iv)
+disclose results of any program benchmark tests without Kaazing's prior written consent; (v) use
+any Kaazing name, trademark, or logo without prior written consent; or (vi) use the Software for
+any commercial or production purposes, or for any purpose other than as permitted in this
+Agreement. If Developer wishes to use the Software for any commercial or production purposes,
+or for any purpose other than as permitted under this agreement, Developer must obtain a
+production release version of the Software by contacting Kaazing to obtain the appropriate
+license. Developer acknowledges that Kaazing may not produce a production release of the
+Software and that any development efforts undertaken by Developer are at its sole risk, cost, and
+expense.
+
+(b) Developer acknowledges and agrees that Kaazing may audit Developer's use of the
+Software to verify Developer's compliance with this Agreement. This audit right includes,
+without limitation, the right to audit Developer's use of the Licensed Software remotely, and the
+right to conduct or procure in-person audits of Developer's facilities and systems.
+
+6. ACKNOWLEDGMENT OF BETA AND OTHER PRE-PRODUCTION SOFTWARE.
+Developer acknowledges that the Software may include "beta" or other pre-production software
+that has not been commercially released ("Beta Software"). Kaazing will indicate that Software
+is Beta Software by noting its pre-production or "beta" status at the time it is made available to
+Developer. Beta Software may not have been tested like other commercially released services or
+software that Developer may use, and may contain errors, including errors that may cause the
+Software or Developer's hardware or systems to malfunction or to suffer a loss of data. If
+Developer does not wish to accept the risk of errors in any such Beta Software, Developer must
+not install or use such Beta Software. Furthermore, Kaazing is not obligated to correct errors,
+correct the effects of errors (e.g., fix Developer's hardware or systems, or recover lost data), or
+provide any technical support related to use of Beta Software.
+
+7. CONFIDENTIALITY. In order to protect the trade secrets and proprietary know-how
+contained in the Software, Developer will not decompile, disassemble, or reverse engineer the
+Software. Developer will maintain the confidentiality of and not disclose to any third party: (a)
+the terms of this Agreement, (b) any non-public information disclosed by Kaazing to Developer
+under this Agreement, and (c) any Software performance data or any other information obtained
+by using the Software.
+
+8. WARRANTY DISCLAIMER. THE SOFTWARE IS PROVIDED "AS IS" FOR LIMITED
+DEVELOPMENT PURPOSES, AND KAAZING DOES NOT WARRANT THAT THE
+SOFTWARE WILL OPERATE WITHOUT ERROR OR INTERRUPTION. KAAZING
+EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT,
+QUALITY, ACCURACY, AND FTNESS FOR A PARTICULAR PURPOSE.
+
+9. LIMITATION OF LIABILITY. THE TOTAL LIABILITY OF KAAZING ARISING OUT
+OF OR RELATED TO THIS AGREEMENT WILL NOT EXCEED $50. IN NO EVENT WILL
+KAAZING HAVE LIABILITY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR
+CONSEQUENTIAL DAMAGES, EVEN IF ADVISED OF THE POSSIBILITY OF THESE
+DAMAGES. THESE LIMITATIONS WILL APPLY NOTWITHSTANDING ANY FAILURE
+OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY IN THIS AGREEMENT.
+
+10. RESTRICTED USE. Any use, duplication, or disclosure of the Software by the United States
+government is subject to the restrictions set forth in subdivision (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227- 7013 and the Commercial
+Computer Software - Restricted Rights clauses at FAR 52.227-19. Use, duplication, or disclosure
+of the Software by the government of any other country is subject to that country's restrictions of
+similar applicable laws.
+
+11. TERMINATION. Developer may terminate this Agreement by destroying all copies of the
+Software. Kaazing may terminate this Agreement, and Developer's right to use the Software, if
+Developer fails to comply with any of the terms of this Agreement or, if Developer is using Beta
+Software, when the applicable beta testing period expires. Upon termination, Developer must: (a)
+discontinue all use of the Software, (b) uninstall the Software from its systems, (c) destroy or
+return to Kaazing all copies of the Software and any other materials provided by Kaazing to
+Developer, and (d) promptly provide Kaazing with written confirmation (including via email) of
+Developer's compliance with these provisions. Sections 4, 6, 7, 8, 9, 11, 12, and 13 will survive
+termination or expiration of this Agreement.
+
+12. FEEDBACK. In the event that you provide any feedback to Kaazing regarding the Software,
+including, without limitation, identification of potential errors and improvements ("Feedback"),
+you hereby grant Kaazing the unrestricted right to use your Feedback, including using your
+Feedback to improve the Software and create other products and services.
+
+13. MISCELLANEOUS. This Agreement will be governed by the laws of the State of
+California, U.S.A without reference to conflict of law principles. All disputes arising out of or
+related to this Agreement will be subject to the exclusive jurisdiction of the state and federal
+courts located in Santa Clara County, California, and the parties agree and submit to the personal
+and exclusive jurisdiction and venue of these courts. Developer will not assign this Agreement,
+directly or indirectly, by operation of law or otherwise, without the prior written consent of
+Kaazing. Developer will comply in all respects with all U.S. and foreign export and re-export
+laws and regulations applicable to the technology and documentation provided hereunder. This is
+the entire agreement between the parties relating to the Software. No waiver or modification of
+this Agreement will be valid unless contained in a writing signed by each party.

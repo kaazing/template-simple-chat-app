@@ -1,0 +1,2 @@
+"broker", true, "the broker to be started with the Gateway. e.g.: \"--broker jms\" for ActiveMQ or \"--broker amqp\" for AMQP"
+

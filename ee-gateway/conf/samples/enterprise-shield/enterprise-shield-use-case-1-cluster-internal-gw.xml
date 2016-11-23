@@ -1,0 +1,76 @@
+<!--
+
+    Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+
+-->
+<gateway-config xmlns="http://xmlns.kaazing.com/2012/09/gateway">
+
+  <!-- Internal Configuration -->
+
+  <!-- ===================================================================== -->
+
+  <properties>
+
+    <!-- The gateway in the DMZ to connect to. -->
+    <property>
+      <name>dmz.backplane.hostname</name>
+      <value>gateway1.example.dmz.net</value>
+    </property>
+
+  </properties>
+
+  <!-- ===================================================================== -->
+
+  <service>
+
+    <name>Internal App1</name>
+
+    <accept>ws://gateway.example.com:8080/app1</accept>
+
+    <connect>tcp://127.0.0.1:3101</connect>
+
+    <type>proxy</type>
+
+    <accept-options>
+        <http.transport>socks://${dmz.backplane.hostname}:1080</http.transport>
+        <socks.mode>reverse</socks.mode>
+        <socks.retry.maximum.interval>1 second</socks.retry.maximum.interval>
+        <socks.transport>wsn://${dmz.backplane.hostname}:1080/shield</socks.transport>
+        <ws.inactivity.timeout>60 seconds</ws.inactivity.timeout>
+    </accept-options>
+
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+  <!-- ===================================================================== -->
+
+  <service>
+
+    <name>Internal App2</name>
+
+    <accept>ws://gateway.example.com:8080/app2</accept>
+
+    <connect>tcp://127.0.0.1:3102</connect>
+
+    <type>proxy</type>
+
+    <accept-options>
+        <http.transport>socks://${dmz.backplane.hostname}:1080</http.transport>
+        <socks.mode>reverse</socks.mode>
+        <socks.retry.maximum.interval>1 second</socks.retry.maximum.interval>
+        <socks.transport>wsn://${dmz.backplane.hostname}:1080/shield</socks.transport>
+        <ws.inactivity.timeout>60 seconds</ws.inactivity.timeout>
+    </accept-options>
+
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+
+  </service>
+
+  <!-- ===================================================================== -->
+
+</gateway-config>

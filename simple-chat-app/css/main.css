@@ -1,0 +1,149 @@
+h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#connection-details {
+    display: none;
+    z-index: 10;
+    border: solid 1px red;
+    position: fixed;
+    top: 5px;
+    padding: 20px;
+    border: solid 2px #ffa1a1;
+    background-color: #ffffff;
+    /*background-color: #fff7f7;*/
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.22);
+
+    /* Center */
+    left: 50%;
+    width: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#connection-details button {
+    min-width: 100px;
+}
+
+#wsUrl {
+    min-width: 300px;
+}
+
+#username {
+    margin-top: 10px;
+}
+
+#conversation {
+    border: solid 1px #cccccc;
+    border-radius: 0px;
+    min-height: 100px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+#conversation .card {
+    border-bottom: solid 1px #eeeeee;
+    padding: 8px 20px;
+}
+#conversation .card:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+#conversation .message {
+    margin-top: 8px;
+}
+
+#conversation .sent .sender {
+    color: #b7d1b2;
+}
+#conversation .sent .message {
+    color: #3B6932;
+}
+
+
+#conversation .received .sender {
+    color: #bdc3e5;
+}
+#conversation .received .message {
+    color: #323F91;
+}
+
+#sendMessageDetails {
+    margin-top: 5px;
+}
+
+#sendMessageDetails div:nth-of-type(1) {
+    padding-right: 0;
+}
+#sendMessageDetails div:nth-of-type(2) {
+    padding-left: 4px;
+}
+
+#sendMessageBut {
+  display: block;
+  width: 100%;
+}
+
+#connection-status {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 30px;
+}
+#connection-status.agent {
+    top: 23px;
+}
+
+#connection-status.disconnected {
+    background-image: url('../images/led_disconnected_16x16.png');
+}
+
+#connection-status.connected {
+    background-image: url('../images/led_connected_16x16.png');
+}
+
+#user-list {
+    min-height: 100px;
+    overflow-y: auto;
+    margin-top: 5px;
+    border: solid 1px #dddddd;
+    border-radius: 4px;
+}
+
+.list-group {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    outline: none;
+}
+
+#user-list span.connected, #user-list span.disconnected {
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 3px;
+}
+
+#user-list span.connected {
+    background-image: url('../images/led_connected_16x16.png');
+}
+
+#user-list span.disconnected {
+    background-image: url('../images/led_disconnected_16x16.png');
+}
+
+.unread {
+    display: block;
+}
+
+.read {
+    display: none;
+}
