@@ -16,6 +16,9 @@ const DIST = 'dist';
 
 var lintrcFile = '.eslintrc-error';
 
+// Runs browsersync so you can see the files and have them updated any time
+// you make changes.
+//
 gulp.task('default', function(done) {
   lintrcFile = '.eslintrc-warn'
   runSequence(
@@ -46,6 +49,8 @@ gulp.task('pages:dist', function() {
   .pipe(gulp.dest(DIST));
 });
 
+// Validate HTML files, including JavaScript contained in the HTML files.
+//
 gulp.task('pages', function(done) {
   runSequence(
     'pages:validate-html',
@@ -55,25 +60,31 @@ gulp.task('pages', function(done) {
   );
 });
 
+// Add images to the distribution.
+//
 gulp.task('images', function(done) {
   return gulp.src(SRC+'/images/**/*')
   .pipe(gulp.dest(DIST+'/images'));
 });
 
+// Validate CSS files.
+//
 gulp.task('css', function(done) {
   return gulp.src(SRC+'/css/*.css')
   .pipe(gulp.dest(DIST+'/css'));
 });
 
+// Add lib folders to the distribution.
+//
 gulp.task('lib', function(done) {
   return gulp.src(SRC+'/lib/**/*')
   .pipe(gulp.dest(DIST+'/lib'));
 });
 
+// Validate JavaScript files.
 gulp.task('js', function() {
   const dest = DIST+'/js';
   return gulp.src(SRC+'/js/**/*.js')
-  .pipe(debug({ title: "before" }))
   .pipe(changed(dest))
   .pipe(eslint(lintrcFile))
   .pipe(eslint.format())
@@ -81,6 +92,8 @@ gulp.task('js', function() {
   .pipe(gulp.dest(dest));
 });
 
+// Monitor files for changes to trigger a rebuild.
+//
 gulp.task('watch', function(){
   gulp.watch(SRC+'/*.html', ['pages', browserSync.reload]);
   gulp.watch(SRC+'/images/**/*', ['images', browserSync.reload]);
@@ -89,6 +102,8 @@ gulp.task('watch', function(){
   gulp.watch(SRC+'/js/**/*', ['js', browserSync.reload]);
 })
 
+// Serve the build files.
+//
 gulp.task('browserSync', function() {
   // return;
   browserSync.init({
@@ -103,10 +118,14 @@ gulp.task('browserSync', function() {
   });
 })
 
+// Remove generated files.
+//
 gulp.task('clean', function() {
   return del(DIST);
 });
 
+// Build the distribution.
+//
 gulp.task('build', function(done) {
   runSequence(
     'clean',
