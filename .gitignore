@@ -15,5 +15,5 @@ buildNumber.properties
 app.log
 run/*/log
 
-gulp/dist
+dist/
 node_modules
