@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Template Simple Chat App</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link href="resources/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<!-- TODO: Update maven pom.xml to be version 1.1 -->
+<!-- TODO: Add a link to part 2 with security, once it is done -->
+
+    <h1>Template Simple Chat App</h1>
+
+    <div class="intro">
+    <h3>What is this?</h3>
+    <p>You can use this template as a starter kit for your own WebSocket application. It is an end-to-end working example that shows how a similar application may be architected.</p>
+    </div>
+
+    <p>This is a template for a simple customer-agent chat application. Customers open the chat application in their browser and chat with an agent. Agents open a different version of the chat app which lets them chat with multiple customers at the same time. The architecture looks like this:</p>
+
+    <p><img class="border" src="resources/images/architecture1.png"/></p>
+
+    <h2>Contents</h2>
+
+    <blockquote>
+      <p><a href="#components">Components</a></p>
+      <p><a href="#running">Running the application</a></p>
+      <p><a href="#protocol">The Protocol</a></p>
+      <p><a href="#directories">Template Directory Structure</a></p>
+      <p><a href="#Limitations">Limitations</a></p>
+      <p><a href="#troubleshooting">Troubleshooting</a></p>
+    </blockquote>
+
+    <h2><a name="components"></a>Components</h2>
+
+    <ul>
+
+      <li>
+        <p>Customers and agents use single-page browser-based JavaScript client applications. The screenshots below show a customer having a conversation with an agent, and an agent having conversations with multiple customers.</p>
+
+        <p>Customer application (click to enlarge):<br/>
+        <a href="resources/images/customer1.png" target="_blank"><img class="border" src="resources/images/customer1.png" width="200px"/></a></p>
+
+        <!-- TODO: Fix image. The text says "Robin" when it should say the message -->
+        <p>Agent application (click to enlarge):<br/>
+        <a href="resources/images/agent1.png" target="_blank"><img class="border" src="resources/images/agent1.png" width="200px"/></a></p>
+      </li>
+
+      <li>
+        <p>The chat server is a Java-based TCP socket server. It is responsible for ensuring chat messages between customers and agents are routed to the correct users. It listens for TCP connections from client and agent applications, and communicates using a custom protocol over TCP. In this example, the custom protocol is simply exchanging JSON messages.</p>
+      </li>
+
+      <li>
+        <p>Kaazing WebSocket Gateway (KWG) proxies the custom chat protocol between clients and the chat server. It communicates with the browser clients over the web using WebSocket, and with the chat server using TCP.</p>
+      </li>
+
+    </ul>
+
+    <h2><a name="running"></a>Running the application</h2>
+
+    <p>Follow these steps to start all of the components, and then run the application.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step " ref="repo"></seq></div>
+
+    <p>Get the files for this template.</p>
+
+    <p>They can be found in the Github repository <a href="https://github.com/kaazing/template-simple-chat-app">https://github.com/kaazing/template-simple-chat-app</a>.</p>
+
+    <p>Github provides multiple ways to obtain the files, such as:</p>
+
+    <ul>
+
+      <li>
+        <p>Clone the repository. From a terminal window run the following commands:</p>
+
+<pre>
+$ git clone https://github.com/kaazing/template-simple-chat-app.git
+$ cd template-simple-chat-app
+</pre>
+      </li>
+
+      <li>
+        <p><a href="https://github.com/kaazing/template-simple-chat-app/archive/master.zip">Download a zip</a> of the files.</p>
+      </li>
+
+      <li>
+        <p>Visit the <a href="https://github.com/kaazing/template-simple-chat-app">https://github.com/kaazing/template-simple-chat-app</a> repo for other ways to obtain the files.</p>
+      </li>
+
+    </ul>
+
+    <div class="seq"><seq name="instructions" prefix="Step " ref="chatserver"></seq></div>
+
+    <p>Start the chat server.</p>
+
+    <p>Open a terminal window, navigate to the <code>run/protocol-server</code> directory and run the following command:</p>
+
+    <!-- TODO: Add instructions for Windows -->
+    <pre>$ ./run.sh</pre>
+
+    <p>The chat server has successfully started when you see the following output:</p>
+
+<pre>
+Server started on /127.0.0.1:4445
+</pre>
+
+    <p>When clients connect and send messages, log output will be written to this terminal window so you can see what is happening.</p>
+
+    <!-- TODO: Add instructions to run on a different port. -->
+
+    <div class="seq"><seq name="instructions" prefix="Step " ref="gateway"></seq></div>
+
+    <p>Start Kaazing WebSocket Gateway.</p>
+
+    <p>In a new terminal window, navigate to the <code>run/gateway</code> directory and run the following command:</p>
+
+    <pre>$ ./run.sh</pre>
+
+    <p>The gateway is ready when you see the following line:</p>
+
+    <pre>INFO  Started server successfully in 0.186 secs at 2016-11-07 10:45:56</pre>
+
+    <p>Once it is started, the gateway is ready to receive client requests.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>The gateway started in the previous step will accept WebSocket requests from the client applications. But it is also hosts the static content used by the applications.</p>
+
+    <p>Start the customer application using a browser to open the URL <a href="http://localhost:8080/simple-chat/customer.html" target="_blank">http://localhost:8080/simple-chat/customer.html</a></p>
+
+    <p>The status light on the right-hand side is green to indicate that the application has connected. If you couldn't connect, see the <a href="#troubleshooting">Troubleshooting section</a>.</p>
+
+    <p>You can also look at the terminal window output for the chat server you started back in <seq-ref name="instructions" ref="chatserver" prefix="Step " link="true"></seq-ref> which will say:</p>
+
+<pre>
+[/127.0.0.1:65153] New connection
+</pre>
+
+    <p>The prefix data in the square brackets lets you identify the client by their IP address and ephemeral port number.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>Back in the browser, type the name "Robin" in the <strong>Username</strong> field and press Enter.</p>
+
+    <p>This causes a message to be sent to the chat server via Kaazing WebSocket Gateway (KWG) with the credentials. In this template, there is no password, so the only credentials are the username. A future template will cover security separately.</p>
+
+    <p>Look at the terminal output for the chat server:</p>
+
+<pre>
+[/127.0.0.1:65153] Processing full message: [{"type":"credentials","username":"Robin","role":"customer"}] (59 bytes)
+[/127.0.0.1:65153] Message type: credentials
+[/127.0.0.1:65153-Robin] User[address=/127.0.0.1:65153,username=Robin,role=customer]
+</pre>
+
+    <p>The first line shows that a message was received. Note that it's in JSON format.</p>
+
+    <p>The second line shows that the message has been parsed and is of type <strong>credentials</strong>.</p>
+
+    <p>The third line shows the information about the user that was extracted from the message: their username and role. In this template there is no validation that this user is of that role. A future template will demonstrate how to add security so that the username and role can be validated in a trusted way.</p>
+
+    <p>Once the chat server has the credentials, the log line prefix will include the username for easier readability: <code>[/127.0.0.1:65153-Robin]</code></p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>The message field is greyed out because there are currently no agents connected, so there is noone who can receive messages. Let's add an agent so the customer and agent can exchange messages.</p>
+
+    <p>Open a new browser tab and this time start the agent application: <a href="http://localhost:8080/simple-chat/agent.html">http://localhost:8080/simple-chat/agent.html</a></p>
+
+    <p>Arrange your windows so you can see both browsers at the same time:</p>
+
+    <p><a href="resources/images/browsers01.png" target="_blank"><img src="resources/images/browsers01.png" class="border" width="200"/></a></p>
+
+    <p>Type the name "Sidda" in the <strong>Username</strong> field and press Enter to login. As you do so, notice that the message field in Robin's window becomes enabled.</p>
+
+    <p>Here is the console output from the chat server:</p>
+
+<pre>
+[/127.0.0.1:53619] Processing full message: [{"type":"credentials","username":"Sidda","role":"agent"}] (56 bytes)
+[/127.0.0.1:53619] Message type: credentials
+[/127.0.0.1:53619-Sidda] User[address=/127.0.0.1:53619,username=Sidda,role=agent]
+[/127.0.0.1:53619-Sidda] Notifying Sidda (agent) that Robin (customer) is present
+[/127.0.0.1:65153-Robin] Notifying Robin that there are agents are present
+</pre>
+
+    <p>The chat server received the <strong>credentials</strong> message from Sidda and processed in lines 1-3. Then the chat server sends two more messages. The first one, on line 4, is to notify the agent Sidda the customer Robin is present. The second on line 5 is to notify the customer Robin than an agent is now available.</p>
+
+    <p>If you look at the developer console in Robin's browser, you will see the JSON message received from the chat server:</p>
+
+<pre>
+{"type":"AgentsPresent"}
+</pre>
+
+    <p>When the customer app received that message, it enables the message field.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In Robin's browser type a message like "Hello" and press Enter. You will see the message appear in Sidda's window.</p>
+
+    <p>Here is the console log from the chat server:</p>
+
+<pre>
+[/127.0.0.1:65153-Robin] Processing full message: [{"type":"message","messageText":"Hello"}] (40 bytes)
+[/127.0.0.1:65153-Robin] Message type: message
+[/127.0.0.1:65153-Robin] messageText=Hello
+[/127.0.0.1:53619-Sidda] Sending message to Sidda
+[/127.0.0.1:53619-Sidda] message={"type":"customerMessage","sender":"Robin","messageText":"Hello"} len=0065
+</pre>
+
+    <p>The output shows that Robin sent a message. It was parsed by the server of type <strong>message</strong>, and then sent to Sidda.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In Sidda's browser type a response like "Can I help you?" and press Enter. You will see the message appear in Robin's window.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>Open two new browser tabs. In one, open the customer chat app (<a href="http://localhost:8080/simple-chat/customer.html">http://localhost:8080/simple-chat/customer.html</a>), and in the other open the agent chat app (<a href="http://localhost:8080/simple-chat/agent.html">http://localhost:8080/simple-chat/agent.html</a>).</p>
+
+    <p>Arrange your screen so you can see all of the windows:</p>
+
+    <p><a href="resources/images/browsers02.png" target="_blank"><img src="resources/images/browsers02.png" class="border" width="400"/></a></p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In the new customer browser tab, type "Natalie" in the <strong>Username</strong> field and hit Enter to login.</p>
+
+    <p>Notice that Sidda's app now shows there are two customers present:</p>
+
+    <p><a href="resources/images/agent2.png" target="_blank"><img src="resources/images/agent2.png" class="border" width="200"/></a></p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>Send a message from Natalie like "Hi there". Notice that Sidda doesn't see the message since he's currently looking at Robin's conversation. But a badge appears notifying Sidda that there are unread messages from Natalie.</p>
+
+    <p>Send another message from Natalie like, "Can you help me?" and notice that the badge number in Sidda's window increases:</p>
+
+    <p><a href="resources/images/agent3.png" target="_blank"><img src="resources/images/agent3.png" class="border" width="200"/></a></p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In Sidda's window, click on Natalie's username to see her messages.</p>
+
+    <p>In this simple customer-agent chat application, an agent can converse with multiple customers at the same time</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In the other agent application, login by typing "Dan" in the <strong>Username</strong> field and hitting Enter.</p>
+
+    <p>The chat server sends messages to Dan to let him know that customers are already present:</p>
+
+<pre>
+[/127.0.0.1:53621-Dan] Notifying Dan (agent) that Natalie (customer) is present
+[/127.0.0.1:53621-Dan] Notifying Dan (agent) that Robin (customer) is present
+</pre>
+
+    <p>In Dan's app, you can see the two customers Natalie and Robin. In this simple application, previous messages are not stored, so Dan won't see the history of the conversation. But from now on, both Sidda and Dan can see both conversations, and participate.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>Take a few moments to send messages from the various users and play around with the interface. Notice that the agents Sidda and Dan can see all of the messages, so they are aware what other agents are saying.</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In Robin's window, click the green status light icon on the right-hand side. This opens the connection dialog:</p>
+
+    <p><a href="resources/images/customer2.png" target="_blank"><img src="resources/images/customer2.png" class="border" width="200"/></a></p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>Click the <strong>Disconnect</strong> button to disconnect. Robin's status light turns red to who he is disconnected.</p>
+
+    <p>In addition, the status light for Robin in the agent applications turns red to show his connection status:</p>
+
+    <p><a href="resources/images/agent4.png" target="_blank"><img src="resources/images/agent4.png" class="border" width="200"/></a></p>
+
+    <p>The console output from the chat server shows that the agents were notified when Robin disconnected:</p>
+
+<pre>
+[/127.0.0.1:65153-Robin] Remote end closed the connection
+[/127.0.0.1:53619-Sidda] Notifying Sidda (agent) that Robin (customer) disconnected
+[/127.0.0.1:53621-Dan] Notifying Dan (agent) that Robin (customer) disconnected
+</pre>
+
+    <p>The console log in the browser shows the JSON message received by the app:</p>
+
+<pre>
+{"type":"disconnected","username":"Robin"}
+</pre>
+
+    <p>Also note that if the agents Sidda or Dan click on Robin in their app, the message field is disabled and they can't send any messages to Robin.</p>
+
+    <p>(Note that as well pressing the <strong>Disconnect</strong> button, you can also simply close the browser tab to disconnect.)</p>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>In Robin's window, click the <strong>Connect</strong> button.</p>
+
+    <p>Robin's status light turns green, as does the status lights in Sidda and Dan's windows. The users can now exchange messages again.</p>
+
+    <p>The chat server output shows the sequence of messages:</p>
+
+<pre>
+[/127.0.0.1:64442] New connection
+[/127.0.0.1:64442] Processing full message: [{"type":"credentials","username":"Robin","role":"customer"}] (59 bytes)
+[/127.0.0.1:64442] Message type: credentials
+[/127.0.0.1:64442-Robin] User[address=/127.0.0.1:64442,username=Robin,role=customer]
+[/127.0.0.1:64442-Robin] Notifying Robin that there are agents are present
+[/127.0.0.1:53619-Sidda] Notifying Sidda (agent) that Robin (customer) is present
+[/127.0.0.1:53621-Dan] Notifying Dan (agent) that Robin (customer) is present
+</pre>
+
+    <div class="seq"><seq name="instructions" prefix="Step "></seq></div>
+
+    <p>You have now successfully run the application. Continue reading to learn more about how the application works.</p>
+
+
+
+    <h2><a name="protocol"></a>The Protocol</h2>
+
+    <p>This section describes the protocol used by the application.</p>
+
+    <p>With Kaazing WebSocket Gateway you can do any standard or custom protocol over WebSocket, including text and binary protocols. In this template, the server and clients exchange JSON messages. In addition, there is a length prefix with every message so the recipient knows how many bytes to expect.</p>
+
+    <p>Here is an example message:</p>
+
+<pre>
+0059{"type":"credentials","username":"Robin","role":"customer"}
+</pre>
+
+    <p>The first four characters are the length prefix and specify how many subsequent bytes to read until the end of the message. In this version, only single-byte characters are valid. That's because the protocol server is a simple implementation that doesn't deal with multi-byte characters.</p>
+
+    <p>The JSON messages have a <code>type</code> key which specifies which kind of message this is. Then it optionally contains additional keys associated with that message type.</p>
+
+    <h3>Client Message Examples</h3>
+
+    <p>Here are some example messages sent from the client towards the server.</p>
+
+    <p>A customer has started the app:</p>
+
+<pre>
+0059{"type":"credentials","username":"Robin","role":"customer"}
+</pre>
+
+    <p>An agent has started the app:</p>
+
+<pre>
+0056{"type":"credentials","username":"Sidda","role":"agent"}
+</pre>
+
+    <p>A customer sent a message. No user information is needed because the backend server knows which connection it is from:</p>
+<pre>
+0059{"type":"message","messageText":"I need some information."}
+</pre>
+
+    <p>An agent sent a message. The intended recipient is specified:</p>
+
+<pre>
+0063{"type":"message","messageText":"Can I help you?","to":"Robin"}
+</pre>
+
+    <h3>Server Message Examples</h3>
+
+    <p>Here are some example messages sent from the server towards the client.</p>
+
+    <p>Notify customers that an agent is now available, and that customers can now send chat messages:</p>
+
+<pre>
+0024{"type":"AgentsPresent"}
+</pre>
+
+    <p>Notify an agent that a customer is connected and can be communicated with:</p>
+<pre>
+0057{"type":"connected","username":"Robin","role":"customer"}
+</pre>
+
+    <p>The message agents get when a customer sends a chat. It specifies who sent the message:</p>
+
+<pre>
+0084{"type":"customerMessage","sender":"Robin","messageText":"I need some information."}
+</pre>
+
+    <p>The message the customer and other agents get when an agent sends a chat. It specifies who sent the message, and who the intended recipient is:</p>
+
+<pre>
+0085{"type":"agentMessage","sender":"Sidda","to":"Robin","messageText":"Can I help you?"}
+</pre>
+
+    <p>Notify agents that a customer has disconnected:</p>
+
+<pre>
+0042{"type":"disconnected","username":"Robin"}
+</pre>
+
+    <p>Notify customers that there are no agents currently present:</p>
+
+<pre>
+0026{"type":"NoAgentsPresent"}
+</pre>
+
+    <h2><a name="directories"></a>Template Directory Structure</h2>
+
+    <p>This section describes the directories in the template.</p>
+
+    <!-- TODO: Complete the table -->
+    <table class="default directories">
+
+      <thead>
+
+        <tr>
+          <th>Directory</th>
+          <th>Description</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td><code>ee-gateway</code></td>
+          <td>
+            <p>This directory contains Kaazing WebSocket Gateway Enterprise Edition. It is supplied here for convenience, and is the same product you would get if you downloaded it from <a href="http://kaazing.com/download">kaazing.com</a>.</p>
+            <p>You do not need to do anything in this directory. The gateway configuration and start script is kept separate in the <code>run/gateway</code> folder (see below).</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>gulp</code></td>
+          <td>
+            <p>Gulp is used to validate the client application for HTML and JavaScript correctness. This can be used by anyone modifying the client applications. It requires that you have Node.js and gulp installed.</p>
+            <p>Generally you can ignore this directory. But if you would like to ensure you have no HTML or JavaScript errors in the client application, go into the <code>gulp</code> folder and run:</p>
+<pre>
+$ gulp build
+</pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>instructions</code></td>
+          <td>
+            <p>Contains these instructions.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>protocol-server</code></td>
+          <td>
+            <p>This folder contains the source code for the backend chat server, written in Java. For convencience, it is structured as a Maven project for easy compilation, assembly, or importing into a Java IDE.</p>
+            <p>You do not need to do anything in this directory. It has been pre-built and can be run from the <code>run/protocol-server</code> folder (see below).</p>
+            <p>However if you would like to modify the source code of the chat server, then do so in this directory. To compile and build it, open a terminal window in this directory and run:</p>
+<pre>
+$ mvn clean install
+</pre>
+            <p>Then run the jar file in the <code>target</code> directory:</p>
+<pre>
+$ java -jar target/protocol-server-1.1-SNAPSHOT.jar
+</pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>run/gateway</code></td>
+          <td>
+            <p>The configuration and start script for Kaazing WebSocket Gateway can be found here. This will start the gateway found in the top-level <code>ee-egateway</code> directory, using the configuration in the <code>un/gateway/conf</code> directory.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>run/protocol-server</code></td>
+          <td>
+            <p>Contains a compiled runtime jar version of the backend chat server, and a start script to launch it.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><code>simple-chat-app</code></td>
+          <td>
+            <p>This is the source code of the client-side customer and agent applications. When you start the gateway from the <code>run/gateway</code> directory and open the URLs in the instructions above, then these are the files being invoked.</p>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <h2><a name="limitations"></a>Limitations</h2>
+
+    <ul>
+
+        <li>
+            <p>The protocol in this template only supports single-byte characters.</p>
+        </li>
+
+    </ul>
+
+    <h2><a name="troubleshooting"></a>Troubleshooting</h2>
+
+    <ul>
+
+        <li>
+            <p>The default connect URLs for this template are <code>ws://localhost:8080/customer</code> and <code>ws://localhost:8080/agent</code>. If these URLs don't work for some reason – another process is already using port 8080, for example – then you can update the gateway configuration file in <code>un/gateway/conf/simple-chat-gateway-config.xml</code>.</p>
+
+            <p> After restarting the gateway, click the red status light in the client application to open the connect dialog:</p>
+            <p><a href="resources/images/customer2.png" target="_blank"><img src="resources/images/customer2.png" class="border" width="200"/></a></p>
+            <p>Press <strong>Disconnect</strong>, change the URL to match your gateway configuration, then press <strong>Connect</strong>.</p>
+            <p>You can also permanently change the client URL by editing <code>simple-chat-app/customer.html</code> and <code>simple-chat-app/agent.html</code>.</p>
+        </li>
+
+    </ul>
+
+    <footer></footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="resources/lib/jquery/jquery-3.1.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="resources/lib/bootstrap/js/bootstrap.min.js"></script> -->
+
+    <script src="resources/lib/sequences/sequences.js"></script>
+
+  </body>
+</html>
