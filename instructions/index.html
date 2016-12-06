@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Template Simple Chat App</title>
+    <title>Template for Simple Chat App</title>
 
     <!-- Bootstrap -->
-    <!-- <link href="resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="resources/css/main.css" rel="stylesheet">
 
@@ -24,27 +24,27 @@
 <!-- TODO: Update maven pom.xml to be version 1.1 -->
 <!-- TODO: Add a link to part 2 with security, once it is done -->
 
-    <h1>Template Simple Chat App</h1>
+    <div class="container">
+
+    <h1>Template for Simple Chat App</h1>
 
     <div class="intro">
     <h3>What is this?</h3>
-    <p>You can use this template as a starter kit for your own WebSocket application. It is an end-to-end working example that shows how a similar application may be architected.</p>
+    <p>You can use this template as a starter kit for your own WebSocket application. It is an end-to-end working example that shows how your own application could be architected.</p>
     </div>
 
-    <p>This is a template for a simple customer-agent chat application. Customers open the chat application in their browser and chat with an agent. Agents open a different version of the chat app which lets them chat with multiple customers at the same time. The architecture looks like this:</p>
+    <p>This is a template for a simple customer-agent chat application. Customers open the chat application in their browser and chat with an agent. Agents open a different version of the chat app which lets them talk with multiple customers at the same time. The architecture looks like this:</p>
 
     <p><img class="border" src="resources/images/architecture1.png"/></p>
 
     <h2>Contents</h2>
 
-    <blockquote>
-      <p><a href="#components">Components</a></p>
-      <p><a href="#running">Running the application</a></p>
-      <p><a href="#protocol">The Protocol</a></p>
-      <p><a href="#directories">Template Directory Structure</a></p>
-      <p><a href="#Limitations">Limitations</a></p>
-      <p><a href="#troubleshooting">Troubleshooting</a></p>
-    </blockquote>
+    <p><a href="#components">Components</a></p>
+    <p><a href="#running">Running the application</a></p>
+    <p><a href="#protocol">The Protocol</a></p>
+    <p><a href="#directories">Template Directory Structure</a></p>
+    <p><a href="#Limitations">Limitations</a></p>
+    <p><a href="#troubleshooting">Troubleshooting</a></p>
 
     <h2><a name="components"></a>Components</h2>
 
@@ -53,12 +53,17 @@
       <li>
         <p>Customers and agents use single-page browser-based JavaScript client applications. The screenshots below show a customer having a conversation with an agent, and an agent having conversations with multiple customers.</p>
 
-        <p>Customer application (click to enlarge):<br/>
-        <a href="resources/images/customer1.png" target="_blank"><img class="border" src="resources/images/customer1.png" width="200px"/></a></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Customer application (click to enlarge):</p>
+                <p><a href="resources/images/customer1.png" target="_blank"><img class="border img-responsive" src="resources/images/customer1.png"/></a></p>
+            </div>
+            <div class="col-sm-6">
+                <p>Agent application (click to enlarge):</p>
+                <p><a href="resources/images/agent1.png" target="_blank"><img class="border img-responsive" src="resources/images/agent1.png"/></a></p>
+            </div>
+        </div>
 
-        <!-- TODO: Fix image. The text says "Robin" when it should say the message -->
-        <p>Agent application (click to enlarge):<br/>
-        <a href="resources/images/agent1.png" target="_blank"><img class="border" src="resources/images/agent1.png" width="200px"/></a></p>
       </li>
 
       <li>
@@ -67,6 +72,7 @@
 
       <li>
         <p>Kaazing WebSocket Gateway (KWG) proxies the custom chat protocol between clients and the chat server. It communicates with the browser clients over the web using WebSocket, and with the chat server using TCP.</p>
+        <p>KWG can also act as a web server to serve static HTTP content using its directory service. This is how users open the app in this template.</p>
       </li>
 
     </ul>
@@ -417,7 +423,7 @@ Server started on /127.0.0.1:4445
     <p>This section describes the directories in the template.</p>
 
     <!-- TODO: Complete the table -->
-    <table class="default directories">
+    <table class="default directories table table-striped">
 
       <thead>
 
@@ -522,15 +528,18 @@ $ java -jar target/protocol-server-1.1-SNAPSHOT.jar
 
     </ul>
 
+    </div> <!-- .container -->
+
     <footer></footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="resources/lib/jquery/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="resources/lib/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="resources/lib/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="resources/lib/sequences/sequences.js"></script>
 
   </body>
+
 </html>

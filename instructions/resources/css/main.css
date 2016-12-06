@@ -1,14 +1,19 @@
-body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 22px;
-}
-
 div.intro {
     background-color: #fd8032;
     color: #ffffff;
-    padding: 1px 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
+}
+
+div.intro h3 {
+    margin-top: 10px;
+}
+
+img.border {
+    border: solid 1px #dddddd;
+    padding: 5px;
 }
 
 div.seq {
@@ -20,9 +25,34 @@ div.seq {
     color: #4C89B1;
 }
 
-img.border {
-    border: solid 1px #dddddd;
-    padding: 5px;
+footer {
+    margin-top: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: solid 5px #cccccc;
+}
+
+table.directories > tbody > tr > td:first-child {
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+table.directories > thead > tr > th, table.directories > tbody > tr > td {
+    vertical-align: top;
+}
+table.directories > tbody > tr > td > p:last-of-type {
+    margin-bottom: 0;
+}
+
+/*
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 li {
@@ -30,16 +60,6 @@ li {
 }
 li:first-of-type {
     margin-top: 0px;
-}
-
-footer {
-    margin-top: 50px;
-}
-
-h2 {
-    margin-top: 50px;
-    padding-bottom: 5px;
-    border-bottom: solid 5px #cccccc;
 }
 
 table.default {
@@ -59,20 +79,15 @@ table.default > thead > tr > th, table.default > tbody > tr > td {
 table.default > tbody > tr > td > p:first-of-type {
     margin-top: 0;
 }
-table.default > tbody > tr > td > p:last-of-type {
-    margin-bottom: 0;
-}
 table.default > tbody > tr:nth-child(odd) > td {
     background-color: #f6f6f6;
 }
 
-table.directories > tbody > tr > td:first-child {
-    white-space: nowrap;
-    padding-right: 10px;
-}
+*/
 
 /* Development formatting */
 
+/*
 body {
     padding-left: 100px;
     padding-right: 100px;
@@ -94,3 +109,4 @@ pre {
     line-height: 18px;
     border-radius: 4px;
 }
+*/
