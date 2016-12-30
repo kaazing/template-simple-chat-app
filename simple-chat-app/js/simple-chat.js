@@ -56,6 +56,19 @@ const handleWindowResize = function() {
     $('#user-list').css('height', (height) + 'px');
 };
 
+const changeWindowTitle = function() {
+    let suffix = '';
+    const username = $.trim($username.val());
+    if (username !== '' ) {
+        suffix = ' (' + username + ')';
+    }
+    if (getRole() === 'customer') {
+        document.title = 'Simple Customer/Agent Chat App - Customer' + suffix;
+    } else {
+        document.title = 'Simple Customer/Agent Chat App - Agent' + suffix;
+    }
+};
+
 // Update GUI elements based on the connection status.
 // isConnected (boolean)
 //
@@ -405,12 +418,12 @@ const handleClickSendMessageBut = function() {
 
 const handleChangeUsername = function() {
     // If the username changes, save it to local storage
-//    localStorage.setItem('chat-' + getRole() + '-username', $username.val());
-    // TODO: Change this to sendCredentials()?
     if ($username.val().length > 0 && $connectBut.attr('disabled')) {
         chatConnection.sendCredentials($username.val(), getRole());
         $username.attr('disabled', true);
     }
+
+    changeWindowTitle();
 };
 
 $(document).ready(function() {
@@ -488,6 +501,8 @@ $(document).ready(function() {
     });
 
     handleWindowResize();
+
+    changeWindowTitle();
 
     // Connect
     handleClickConnectBut();
