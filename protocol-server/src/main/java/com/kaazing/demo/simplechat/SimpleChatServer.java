@@ -290,7 +290,17 @@ public class SimpleChatServer implements Runnable {
     public static void main(String[] args) {
         try {
             ProtocolFilter worker = new ProtocolFilter();
+            InetAddress host;
+            int port = 4445;
             new Thread(worker).start();
+            if (args.length == 2) {
+                host = InetAddress.getByName(args[0]);
+                port = Integer.parseInt(args[1]);
+            } else if (args.length == 1) {
+                host = InetAddress.getByName(args[0]);
+            } else {
+                host = InetAddress.getByName("localhost");
+            }
             // TODO: Default host and port, but output that it happened and allow it to be
             // overridden with parameters.
             // if (args.length < 2) {
@@ -298,8 +308,6 @@ public class SimpleChatServer implements Runnable {
             // logger.info("Usage: java -jar uber-protocol-server-VERSION.jar 127.0.0.1 4445");
             // System.exit(0);
             // }
-            InetAddress host = InetAddress.getByName("127.0.0.1");
-            int port = 4445;
             new Thread(new SimpleChatServer(host, port, worker)).start();
         }
         catch (IOException e) {
