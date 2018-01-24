@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+# Copyright 2007-2017, Kaazing Corporation. All rights reserved.
 #
 
 PRG="$0"
@@ -21,18 +21,22 @@ PRGDIR=`dirname "$PRG"`
 # to allow determining the conf and lib subdirectories (assumed to 
 # be siblings to this script's 'bin' directory).
 GW_HOME=`cd "$PRGDIR/.." ; pwd`
+SCRIPTED_ARGS=$GW_HOME/lib/enterprise-args.csv
+
+# --------------------------- Broker specific start ---------------------------
 
 # Location of Apache ActiveMQ and Apache QPid brokers.
 ACTIVEMQ_HOME=$GW_HOME/brokers/apache-activemq-*
 QPID_HOME=$GW_HOME/brokers/qpid-java-broker-*
-SCRIPTED_ARGS=$GW_HOME/lib/enterprise-args.csv
 
-ARGS=""
 BROKER=""
+ARGS=""
+
 while [[ "$#" > 0 ]]
 do
     case $1 in
         --broker)
+            USE_BROKER=1
             BROKER="$2"
             shift
             ;;
@@ -51,14 +55,14 @@ function cleanup()
     then
        if [[ $BROKER = "JMS" ]]
        then
-          echo "Starting Apache Active MQ JMS Broker"
+          echo "Stopping Apache Active MQ JMS Broker"
           $ACTIVEMQ_HOME/bin/activemq stop
        elif [[ $BROKER = "AMQP" ]]
        then
           echo "Stopping Apache QPid AMQP 0-9-1 Broker"
           $QPID_HOME/bin/qpid.stop
        else
-          echo "$0: '$BROKER' broker not supported. Valid values for the 'broker' command-line parameter are 'AMQP' and 'JMS'."
+          echo "ERROR: $0: '$BROKER' broker not supported. Valid values for the 'broker' command-line parameter are 'AMQP' and 'JMS'."
        fi
     fi
     shopt -u nocasematch
@@ -70,7 +74,7 @@ trap cleanup SIGHUP SIGINT SIGTERM
 
 shopt -s nocasematch
 
-if [[ $LEN -gt 0 ]]
+if [[ $USE_BROKER -eq 1 ]]
 then
    if [[ $BROKER = "JMS" ]]
    then
@@ -78,15 +82,18 @@ then
       $ACTIVEMQ_HOME/bin/activemq start
    elif [[ $BROKER = "AMQP" ]]
    then
-      echo "Stopping Apache QPid AMQP 0-9-1 Broker"
+      echo "Starting Apache QPid AMQP 0-9-1 Broker"
       $QPID_HOME/bin/qpid-server -os &
    else
-      echo "$0: '$BROKER' broker not supported. Valid values for the 'broker' command-line parameter are 'AMQP' and 'JMS'."
+      echo "ERROR: $0: '$BROKER' broker not supported. Valid values for the 'broker' command-line parameter are 'AMQP' and 'JMS'."
       exit 1
    fi
 fi
 
+
 shopt -u nocasematch
+
+# ---------------------------- Broker specific end ----------------------------
 
 # You can define various Java system properties by setting the value
 # of the GATEWAY_OPTS environment variable before calling this script.
@@ -101,7 +108,7 @@ shopt -u nocasematch
 FEATURE_OPTS=""
 if [ -n "$GATEWAY_FEATURES" ]
 then
-   echo Enabling early access features: $GATEWAY_FEATURES  
+   echo "Enabling early access features: " + $GATEWAY_FEATURES  
    set -f; IFS=,
    for feature in $GATEWAY_FEATURES; do
       FEATURE_OPTS="$FEATURE_OPTS -Dfeature.$feature"
@@ -115,7 +122,7 @@ if [[ -x `type -p java` ]]; then
 elif [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin/java" ]]; then
   _java="JAVA_HOME/bin/java"
 else
-  echo "Java is not installed. Cannot start the Gateway."
+  echo "ERROR: Java is not installed. Cannot start the Gateway."
   exit 1
 fi
 
@@ -125,13 +132,14 @@ if [[ "$_java" ]]; then
  # JAVA_VER=$(java -version 2>&1 | sed 's/.*version "\(.*\)\.\(.*\)\..*"/\1\2/; 1q')
  JAVA_VER=$(java -version 2>&1 | grep -i version | cut -d'"' -f2 | cut -d'.' -f1-2)
   if [[ "$JAVA_VER" < "1.8" ]]; then
-    echo "Java 8 or higher must be installed to start the Gateway"
+    if [ "$(uname)" == "Darwin" ]; then
+        echo "ERROR: Kaazing gateway requires Java JRE 8 or higher to run. Note that on Mac OSX installing the JRE does not automatically update your environment or path. See https://java.com/en/download/faq/java_mac.xml#cmdline for more information."        
+    else
+        echo "ERROR: Kaazing gateway requires Java JRE 8 or higher to run."
+    fi
     exit 1
   fi
 fi
-
-# Add a directory for management support
-JAVA_LIBRARY_PATH="$GW_HOME/lib/sigar"
 
 java $GATEWAY_OPTS $FEATURE_OPTS -Djava.library.path="$JAVA_LIBRARY_PATH" -XX:+HeapDumpOnOutOfMemoryError -cp "$GW_HOME/lib/*:$GW_HOME/lib/ext/*" org.kaazing.gateway.server.Main  $ARGS
 

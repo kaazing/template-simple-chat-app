@@ -1,5 +1,5 @@
 @REM
-@REM Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+@REM Copyright 2007-2017, Kaazing Corporation. All rights reserved.
 @REM
 
 @echo off
@@ -16,13 +16,16 @@ rem A temporary variable for the location of the gateway installation,
 rem to allow determining the conf and lib subdirectories (assumed to 
 rem be siblings to this script's 'bin' directory).
 set GW_HOME=..
+set GATEWAY_HOME=%~dp0\..
+set SCRIPTED_ARGS=%GATEWAY_HOME%\lib\enterprise-args.csv
+
+rem --------------------------- Broker specific start ---------------------------
+
 for /f %%i in ('dir /b %GW_HOME%\brokers\qpid-java-broker-*') do set QPID_DIR=%%i
 for /f %%i in ('dir /b %GW_HOME%\brokers\apache-activemq-*') do set ACTIVEMQ_DIR=%%i
 
-set GATEWAY_HOME=%~dp0\..
 set ACTIVEMQ_HOME=%GATEWAY_HOME%\brokers\%ACTIVEMQ_DIR%
 set QPID_HOME=%GATEWAY_HOME%\brokers\%QPID_DIR%
-set SCRIPTED_ARGS=%GATEWAY_HOME%\lib\enterprise-args.csv
 
 set ARG0=%0
 set ARGS=
@@ -42,13 +45,13 @@ if not "%1" == "" (
     goto :loop
 )
 
-if defined BROKER (
+if defined USE_BROKER (
     if /i "%BROKER%" == "AMQP" (
-        echo "Start Apache QPid AMQP 0-9-1 broker"
-        start "" "%QPID_HOME%\bin\qpid-server.bat"
+        echo "Starting Apache QPid AMQP 0-9-1 broker"
+        start "" "%QPID_HOME%\bin\qpid-server.bat -os"
     ) else (
         if /i "%BROKER%" == "JMS" (
-            echo "Start Apache ActiveMQ JMS broker"
+            echo "Starting Apache ActiveMQ JMS broker"
             start "" "%ACTIVEMQ_HOME%\bin\win64\activemq.bat"
         ) else (
             echo "%ARG0%: '%BROKER%' broker not supported. Valid values for the 'broker' command-line parameter are 'AMQP' and 'JMS'."
@@ -56,6 +59,8 @@ if defined BROKER (
         )
     )
 )
+
+rem ---------------------------- Broker specific end ----------------------------
 
 rem You can define various Java system properties by setting the value
 rem of the GATEWAY_OPTS environment variable before calling this script.
@@ -72,7 +77,8 @@ rem The script itself should not be changed.
 set FEATURE_OPTS= 
 if not "%GATEWAY_FEATURES%" == "" (
    echo Enabling early access features: %GATEWAY_FEATURES%
-   set FEATURE_OPTS=-Dfeature.%GATEWAY_FEATURES:,= -Dfeature.%
+   set GATEWAY_FEATURES=%GATEWAY_FEATURES: =%
+   set FEATURE_OPTS=-Dfeature.!GATEWAY_FEATURES:,= -Dfeature.!
 )
 
 rem Checking if Java installed
@@ -91,8 +97,5 @@ if %jver% LSS 18 (
 )
 
 rem Create the classpath.
-
-rem Add a directory for management support
-set JAVA_LIBRARY_PATH=%GW_HOME%\lib\sigar
 
 java %FEATURE_OPTS% %GATEWAY_OPTS% -Djava.library.path="%JAVA_LIBRARY_PATH%" -XX:+HeapDumpOnOutOfMemoryError -cp "%GW_HOME%\lib\*;%GW_HOME%\lib\ext\*" org.kaazing.gateway.server.WindowsMain %ARGS%

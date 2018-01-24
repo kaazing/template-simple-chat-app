@@ -1,890 +1,427 @@
-This product depends on Agrona 0.4
+This product depends on Logback Classic Module 1.1.7
 
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache License, Version 2.0)
-	Homepage:	https://github.com/real-logic/Agrona
+	License:	http://www.eclipse.org/legal/epl-v10.html (Eclipse Public License - v 1.0)
+	Homepage:	http://logback.qos.ch/logback-classic
 
-This product depends on HdrHistogram 1.2
+This product depends on Logback Core Module 1.1.7
 
-	License:	http://creativecommons.org/publicdomain/zero/1.0/ (Public Domain, per Creative Commons CC0)
-	Homepage:	http://hdrhistogram.github.io/HdrHistogram/
+	License:	http://www.eclipse.org/legal/epl-v10.html (Eclipse Public License - v 1.0)
+	Homepage:	http://logback.qos.ch/logback-core
 
-This product depends on ActiveIO :: Core 3.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activeio-core/
-
-This product depends on ActiveMQ :: All JAR bundle 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-all
-
-This product depends on ActiveMQ :: AMQP 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-amqp
-
-This product depends on ActiveMQ :: Broker 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-broker
-
-This product depends on ActiveMQ :: Camel 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-camel
-
-This product depends on ActiveMQ :: Client 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-client
-
-This product depends on ActiveMQ :: Console 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-console
-
-This product depends on ActiveMQ :: File Server 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-fileserver
-
-This product depends on ActiveMQ :: HTTP Protocol Support 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-http
-
-This product depends on ActiveMQ :: JAAS 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-jaas
-
-This product depends on ActiveMQ :: JDBC Store 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-jdbc-store
-
-This product depends on ActiveMQ :: Generic JMS Pool 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-jms-pool
-
-This product depends on ActiveMQ :: KahaDB Store 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-kahadb-store
-
-This product depends on ActiveMQ :: LevelDB Store 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-leveldb-store
-
-This product depends on ActiveMQ :: Log4j Appender 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-log4j-appender
-
-This product depends on ActiveMQ :: MQTT Protocol 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-mqtt
-
-This product depends on ActiveMQ :: Openwire Legacy Support 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-openwire-legacy
-
-This product depends on ActiveMQ :: Partition Management 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-partition
-
-This product depends on ActiveMQ :: Pool 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-pool
-
-This product depends on ActiveMQ Protocol Buffers Implementation and Compiler 1.1
+This product depends on Jackson-annotations 2.1.0
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-protobuf
+	Homepage:	http://wiki.fasterxml.com/JacksonHome
 
-This product depends on ActiveMQ :: Run Jar 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-run
-
-This product depends on ActiveMQ :: Runtime Configuration 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-runtime-config
-
-This product depends on ActiveMQ :: Shiro 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-shiro
-
-This product depends on ActiveMQ :: Spring 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-spring
-
-This product depends on ActiveMQ :: STOMP Protocol 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-stomp
-
-This product depends on ActiveMQ :: Web Console 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-web-console
-
-This product depends on ActiveMQ :: Web Demo 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-web-demo
-
-This product depends on ActiveMQ :: Web 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/activemq-web
-
-This product depends on ant-launcher 1.8
-
-	License:	http://www.apache.org/licenses/ (Apache License 2)
-	Homepage:	http://ant.apache.org/ant-launcher/
-
-This product depends on org.apache.tools.ant 1.8
-
-	License is not included in maven artifact, look at homepage for license	
-	Homepage:	http://ant.apache.org/ant/
-
-This product depends on ANTLR 4 Runtime Annotations 4.2
-
-	License:	http://www.antlr.org/license.html (The BSD License)
-	Homepage:	http://www.antlr.org/antlr4-annotations
-
-This product depends on ANTLR 4 Runtime 4.2
-
-	License:	http://www.antlr.org/license.html (The BSD License)
-	Homepage:	http://www.antlr.org/antlr4-runtime
-
-This product depends on AOP alliance 1.0
-
-	License:	null (Public Domain)
-	Homepage:	http://aopalliance.sourceforge.net
-
-This product depends on ActiveMQ :: Assembly 5.13
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://activemq.apache.org/apache-activemq
-
-This product depends on MortBay :: Apache EL :: API and Implementation 8.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache License Version 2.0)
-	Homepage:	http://www.eclipse.org/jetty/jasper-jsp/apache-el
-
-This product depends on MortBay :: Apache Jasper :: JSP Implementation 8.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache License Version 2.0)
-	Homepage:	http://www.eclipse.org/jetty/jasper-jsp/apache-jsp
-
-This product depends on Jetty :: Apache JSP Implementation 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Apache :: JSTL module 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://tomcat.apache.org/taglibs/standard/
-
-This product depends on ASM Core 5.0
-
-	License:	http://asm.objectweb.org/license.html (BSD)
-	Homepage:	http://asm.objectweb.org/asm/
-
-This product depends on Camel :: Core 2.16
+This product depends on Jackson-core 2.1.0
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://camel.apache.org/camel-parent/camel-core
+	Homepage:	http://wiki.fasterxml.com/JacksonHome
 
-This product depends on Camel :: JMS 2.16
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://camel.apache.org/camel-parent/components/camel-jms
-
-This product depends on Camel :: Spring 2.16
+This product depends on jackson-databind 2.1.0
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://camel.apache.org/camel-parent/components/camel-spring
+	Homepage:	http://wiki.fasterxml.com/JacksonHome
 
-This product depends on Commons BeanUtils Core 1.8
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/beanutils/
-
-This product depends on Commons BeanUtils 1.8
+This product depends on FindBugs-jsr305 3.0.1
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/beanutils/
+	Homepage:	http://findbugs.sourceforge.net/
+
+This product depends on Guava: Google Core Libraries for Java 18.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://code.google.com/p/guava-libraries/guava
+
+This product depends on JSON.simple 1.1.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://code.google.com/p/json-simple/
+
+This product depends on hazelcast 3.7.4
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.hazelcast.com/hazelcast/
+
+This product depends on hazelcast-aws 1.1.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.hazelcast.com/
+
+This product depends on hazelcast-client 3.7.4
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.hazelcast.com/hazelcast-client/
 
 This product depends on Commons CLI 1.2
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://commons.apache.org/cli/
 
-This product depends on Apache Commons Codec 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/proper/commons-codec/
-
-This product depends on Apache Commons Collections 3.2
+This product depends on Apache Commons Codec 1.10
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://commons.apache.org/collections/
+	Homepage:	http://commons.apache.org/proper/commons-codec/
 
-This product depends on Commons Configuration 1.6
-
-	License:	/LICENSE.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/${pom.artifactId.substring(8)}/
-
-This product depends on Commons Daemon 1.0
+This product depends on Commons Collections 3.2.1
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/daemon/
-
-This product depends on Digester 1.8
-
-	License:	/LICENSE.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://jakarta.apache.org/commons/digester/
+	Homepage:	http://commons.apache.org/collections/
 
 This product depends on Commons IO 2.4
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://commons.apache.org/io/
 
-This product depends on Commons Lang 2.6
+This product depends on Commons Lang 2.4
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://commons.apache.org/lang/
 
-This product depends on Logging 1.1
-
-	License:	/LICENSE.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://jakarta.apache.org/commons/${pom.artifactId.substring(8)}/
-
-This product depends on Commons Net 3.3
+This product depends on Apache Commons Logging 1.2
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://commons.apache.org/proper/commons-net/
+	Homepage:	http://commons.apache.org/proper/commons-logging/
 
-This product depends on Apache Commons Pool 2.4
+This product depends on Java Unified Expression Language API 2.2.7
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://juel.sourceforge.net/juel-api/
+
+This product depends on Java Unified Expression Language Implementation 2.2.7
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://juel.sourceforge.net/juel-impl/
+
+This product depends on Netty 3.10.5.Final
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache License, Version 2.0)
+	Homepage:	http://netty.io/
+
+This product depends on Streaming API for XML 1.0-2
+
+	License:	http://www.sun.com/cddl/cddl.html (COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0)
+	The project URL is not included in this dependency's pom, and thus could not be referenced here.
+
+This product depends on Javassist 3.7.ga
+
+	License:	http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/jboss/javassist/License.html?rev=HEAD&content-type=text/html (MPL 1.1)
+	Homepage:	http://labs.jboss.com/javassist/
+
+This product depends on Joda-Time 2.9
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
+	Homepage:	http://www.joda.org/joda-time/
+
+This product depends on JUnit 4.12
+
+	License:	http://www.eclipse.org/legal/epl-v10.html (Eclipse Public License 1.0)
+	Homepage:	http://junit.org
+
+This product depends on Apache Log4j 1.2.17
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://logging.apache.org/log4j/1.2/
+
+This product depends on opencsv 2.3
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
+	Homepage:	http://opencsv.sf.net
+
+This product depends on java-support 7.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/java-support/
+
+This product depends on OGNL - Object Graph Navigation Library 2.7.2
+
+	License:	http://www.apache.org/licenses/ (Apache License 2)
+	Homepage:	http://ognl.org
+
+This product depends on abego TreeLayout Core 1.0.1
+
+	License:	http://treelayout.googlecode.com/files/LICENSE.TXT (BSD 3-Clause "New" or "Revised" License (BSD-3-Clause))
+	Homepage:	http://code.google.com/p/treelayout/
+
+This product depends on Agrona 0.9.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache License, Version 2.0)
+	Homepage:	https://github.com/real-logic/Agrona
+
+This product depends on ANTLR 4 Runtime Annotations 4.2.2
+
+	License:	http://www.antlr.org/license.html (The BSD License)
+	Homepage:	http://www.antlr.org/antlr4-annotations
+
+This product depends on ANTLR 4 Runtime 4.2.2
+
+	License:	http://www.antlr.org/license.html (The BSD License)
+	Homepage:	http://www.antlr.org/antlr4-runtime
+
+This product depends on ActiveMQ :: Client 5.14.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
+	Homepage:	http://activemq.apache.org/activemq-client
+
+This product depends on Apache Commons Pool 2.4.2
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://commons.apache.org/proper/commons-pool/
 
-This product depends on Eclipse JDT Core 3.1
-
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License v1.0)
-	Homepage:	http://www.eclipse.org/jdt/
-
-This product depends on Annotation 1.0 1.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://geronimo.apache.org/specs/geronimo-annotation_1.0_spec
-
-This product depends on J2EE Connector 1.5 2.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://geronimo.apache.org/specs/geronimo-j2ee-connector_1.5_spec
-
-This product depends on J2EE Management 1.1 1.0
+This product depends on J2EE Management 1.1 1.0.1
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://geronimo.apache.org/specs/geronimo-j2ee-management_1.1_spec
-
-This product depends on J2EE JACC 1.1 1.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://geronimo.apache.org/specs/geronimo-jacc_1.1_spec
 
 This product depends on JMS 1.1 1.1
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://geronimo.apache.org/specs/geronimo-jms_1.1_spec
 
-This product depends on JTA 1.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://geronimo.apache.org/geronimo-jta_1.0.1B_spec
-
 This product depends on JTA 1.1 1.1
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://geronimo.apache.org/specs/geronimo-jta_1.1_spec
 
-This product depends on Guava: Google Core Libraries for Java 12.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://code.google.com/p/guava-libraries/guava
-
-This product depends on hadoop-core 1.0
-
-	License is not included in maven artifact, look at homepage for license	
-Home page is not included in maven artifact, and thus couldn't be referenced here
-
-This product depends on hawtbuf-proto 1.11
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtbuf.fusesource.org/hawtbuf-proto
-
-This product depends on hawtbuf 1.10
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtbuf.fusesource.org/hawtbuf
-
-This product depends on hawtdispatch-scala-2.11 1.22
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtdispatch.fusesource.org/hawtdispatch-scala-2.11/
-
-This product depends on hawtdispatch-transport 1.22
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtdispatch.fusesource.org/hawtdispatch-transport/
-
-This product depends on hawtdispatch 1.22
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtdispatch.fusesource.org/hawtdispatch/
-
-This product depends on HawtJNI Runtime 1.9
-
-	License:	http://www.eclipse.org/legal/epl-v10.html (Eclipse Public License - v 1.0)
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://hawtjni.fusesource.org/hawtjni-runtime
-
-This product depends on hazelcast-client 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://www.hazelcast.com/hazelcast-client/
-
-This product depends on hazelcast-cloud 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://www.hazelcast.com/hazelcast-cloud/
-
-This product depends on hazelcast 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://www.hazelcast.com/hazelcast/
-
-This product depends on Apache HttpClient 4.5
+This product depends on Apache HttpClient 4.3.6
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
 	Homepage:	http://hc.apache.org/httpcomponents-client
 
-This product depends on Apache HttpCore 4.4
+This product depends on Apache HttpCore 4.3.3
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
 	Homepage:	http://hc.apache.org/httpcomponents-core-ga
 
-This product depends on Fabric8 :: Insight :: Logging :: Core 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://fabric8.io/insight-project/insight-log-core/
-
-This product depends on Fabric8 :: Insight :: Logging Log4j 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://fabric8.io/insight-project/insight-log4j/
-
-This product depends on Jackson-annotations 2.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://wiki.fasterxml.com/JacksonHome
-
-This product depends on Jackson-core 2.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://wiki.fasterxml.com/JacksonHome
-
-This product depends on jackson-databind 2.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://wiki.fasterxml.com/JacksonHome
-
-This product depends on JASYPT: Java Simplified Encryption 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://www.jasypt.org
-
-This product depends on JASYPT: Java Simplified Encryption 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://www.jasypt.org
-
-This product depends on JAXB2 Basics - Runtime 0.6
-
-	License:	http://confluence.highsource.org/display/J2B/License (BSD-Style License)
-	Homepage:	http://static.highsource.org/jaxb2-basics/jaxb2-basics-runtime
-
-This product depends on jaxp-api 1.3
-
-	License is not included in maven artifact, look at homepage for license	
-Home page is not included in maven artifact, and thus couldn't be referenced here
-
-This product depends on JCL 1.1.1 implemented over SLF4J 1.7
-
-	License:	http://www.opensource.org/licenses/mit-license.php (MIT License)
-	Homepage:	http://www.slf4j.org
-
-This product depends on jdom 1.0
-
-	License:	https://github.com/hunterhacker/jdom/blob/master/LICENSE.txt (JDOM License)
-	Homepage:	http://jdom.org
-
-This product depends on JDOM 1.1
-
-	License:	https://github.com/hunterhacker/jdom/blob/master/LICENSE.txt (JDOM License)
-	Homepage:	http://www.jdom.org/
-
-This product depends on jedis 2.8
-
-	License is not included in maven artifact, look at homepage for license	
-Home page is not included in maven artifact, and thus couldn't be referenced here
-
-This product depends on Jettison 1.3
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache License, Version 2.0)
-	Homepage:	http://codehaus.org/jettison/
-
-This product depends on Jetty :: Aggregate :: All core Jetty 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Continuation 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Http Utility 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: IO Utility 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Schemas 3.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/jetty-toolchain/jetty-schemas
-
-This product depends on Jetty :: Security 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Server Core 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Servlet Handling 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on Jetty :: Utilities 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty
-
-This product depends on JLine 0.9
-
-	License:	LICENSE.txt (BSD)
-	Homepage:	http://jline.sourceforge.net
-
-This product depends on JmDNS 3.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://sourceforge.net/projects/jmdns/
-
-This product depends on jolokia-core 1.3
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
-	Homepage:	http://www.jolokia.org/jolokia-agent-parent/jolokia-core/
-
-This product depends on JSON.simple 1.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://code.google.com/p/json-simple/
-
-This product depends on JSON (JavaScript Object Notation) 20090211
-
-	License:	http://www.json.org/license.html (provided without support or warranty)
-	Homepage:	http://www.json.org/java/index.html
-
-This product depends on FindBugs-jsr305 2.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://findbugs.sourceforge.net/
-
-This product depends on Java Unified Expression Language API 2.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://juel.sourceforge.net/juel-api/
-
-This product depends on Java Unified Expression Language Implementation 2.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://juel.sourceforge.net/juel-impl/
-
-This product depends on JUL to SLF4J bridge 1.5
-
-	License is not included in maven artifact, look at homepage for license	
-	Homepage:	http://www.slf4j.org
-
-This product depends on k3po/lang 3.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/kaazing/k3po
-
-This product depends on leveldb-api 0.6
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.html (Apache License 2.0)
-	Homepage:	http://github.com/dain/leveldb/leveldb-api
-
-This product depends on leveldb 0.6
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.html (Apache License 2.0)
-	Homepage:	http://github.com/dain/leveldb/leveldb
-
-This product depends on leveldbjni 1.8
-
-	License:	http://www.opensource.org/licenses/BSD-3-Clause (The BSD 3-Clause License)
-	Homepage:	http://leveldbjni.fusesource.org/leveldbjni
-
-This product depends on Apache Log4j 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://logging.apache.org/log4j/1.2/
-
-This product depends on Apache Maven Shared Utils 3.0
+This product depends on Apache Maven Shared Utils 3.0.0
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
 	Homepage:	http://maven.apache.org/shared/maven-shared-utils/
 
-This product depends on mqtt-client 1.12
+This product depends on Apache XML Security for Java 2.0.5
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://mqtt-client.fusesource.org/mqtt-client/
-
-This product depends on The Netty Project 3.7
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache License, Version 2.0)
-	Homepage:	http://netty.io/
-
-This product depends on abego TreeLayout Core 1.0
-
-	License:	http://treelayout.googlecode.com/files/LICENSE.TXT (BSD 3-Clause "New" or "Revised" License (BSD-3-Clause))
-	Homepage:	http://code.google.com/p/treelayout/
-
-This product depends on Annotations for SCR 1.9
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://felix.apache.org/org.apache.felix.scr.annotations/
-
-This product depends on Apache ServiceMix :: Bundles :: josql 1.5_5
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://servicemix.apache.org/bundles-pom/org.apache.servicemix.bundles.josql/
-
-This product depends on Jetty Orbit :: JDT Compiler 3.8
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/jetty-orbit/org.eclipse.jdt.core
-
-This product depends on linkedin-utils 1.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (The Apache Software License, Version 2.0)
-	Homepage:	http://github.com/linkedin/linkedin-utils
-
-This product depends on linkedin-utils 1.7
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (The Apache Software License, Version 2.0)
-	Homepage:	http://github.com/linkedin/linkedin-utils
-
-This product depends on linkedin-zookeeper 1.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (The Apache Software License, Version 2.0)
-	Homepage:	http://github.com/linkedin/linkedin-utils
-
-This product depends on osgi.cmpn 4.3
-
-	License:	http://opensource.org/licenses/apache2.0.php (Apache License, Version 2.0)
-	Homepage:	http://www.osgi.org
-
-This product depends on osgi.core 4.3
-
-	License:	http://opensource.org/licenses/apache2.0.php (Apache License, Version 2.0)
-	Homepage:	http://www.osgi.org
-
-This product depends on OPS4J Pax Url - aether: 2.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.html (ALv2)
-	Homepage:	http://team.ops4j.org/wiki/display/paxurl/pax-url-aether
-
-This product depends on playerglobal 3.2
-
-	License:	null (null)
-Home page is not included in maven artifact, and thus couldn't be referenced here
-
-This product depends on proton-j 0.11
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://qpid.apache.org/proton/proton-j
-
-This product depends on ROME, RSS and atOM utilitiEs for Java 1.0
-
-	License is not included in maven artifact, look at homepage for license	
-	Homepage:	https://rome.dev.java.net/
-
-This product depends on Scala Library 2.11
-
-	License:	http://www.scala-lang.org/license.html (BSD 3-Clause)
-	Homepage:	http://www.scala-lang.org/
-
-This product depends on Apache Shiro :: Core 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://shiro.apache.org/shiro-core/
-
-This product depends on Apache Shiro :: Support :: Spring 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://shiro.apache.org/shiro-spring/
-
-This product depends on Apache Shiro :: Web 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://shiro.apache.org/shiro-web/
-
-This product depends on sigar 1.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/kaazing/sigar.dist.git
-
-This product depends on SLF4J API Module 1.7
-
-	License:	http://www.opensource.org/licenses/mit-license.php (MIT License)
-	Homepage:	http://www.slf4j.org
-
-This product depends on SLF4J LOG4J-12 Binding 1.7
-
-	License:	http://www.opensource.org/licenses/mit-license.php (MIT License)
-	Homepage:	http://www.slf4j.org
-
-This product depends on snappy-java 1.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/xerial/snappy-java
-
-This product depends on snappy 0.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.html (Apache License 2.0)
-	Homepage:	http://github.com/dain/snappy
-
-This product depends on SNMP4J-Agent 1.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
-	Homepage:	https://github.com/kaazing/snmp4j.agent
-
-This product depends on SNMP4J 1.11
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
-	Homepage:	https://github.com/kaazing/snmp4j
-
-This product depends on Spring AOP 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Beans 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Context 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Core 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Expression Language (SpEL) 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring JMS 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Messaging 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Object/XML Marshalling 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Transaction 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Web 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on Spring Web MVC 4.1
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://github.com/spring-projects/spring-framework
-
-This product depends on StAX API 1.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://stax.codehaus.org/
-
-This product depends on Apache Standard Taglib Implementation 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://tomcat.apache.org/taglibs/standard-1.2.1/taglibs-standard-impl
-
-This product depends on Apache Standard Taglib Specification API 1.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://tomcat.apache.org/taglibs/standard-1.2.1/taglibs-standard-spec
-
-This product depends on tomcat-servlet-api 8.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt and
-        http://www.opensource.org/licenses/cddl1.txt (Apache License, Version 2.0 and
-        Common Development And Distribution License (CDDL) Version 1.0)
-	Homepage:	http://tomcat.apache.org/
-
-This product depends on tomcat-websocket-api 8.0
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache License, Version 2.0)
-	Homepage:	http://tomcat.apache.org/
+	Homepage:	http://santuario.apache.org/
 
 This product depends on Apache Velocity 1.7
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://velocity.apache.org/engine/devel/
 
-This product depends on Jetty :: Websocket :: API 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/websocket-api
-
-This product depends on Jetty :: Websocket :: Client 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/websocket-client
-
-This product depends on Jetty :: Websocket :: Common 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/websocket-common
-
-This product depends on Jetty :: Websocket :: Server 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/websocket-server
-
-This product depends on Jetty :: Websocket :: Servlet Interface 9.2
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0 (Apache Software License - Version 2.0)
-	License:	http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License - Version 1.0)
-	Homepage:	http://www.eclipse.org/jetty/websocket-servlet
-
-This product depends on Apache XBean :: Spring 3.18
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	http://geronimo.apache.org/maven/xbean/3.18/xbean-spring
-
-This product depends on Xerces2-j 2.11
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	Homepage:	https://xerces.apache.org/xerces2-j/
-
-This product depends on XML Commons External Components XML APIs 1.4
-
-	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
-	License:	http://www.saxproject.org/copying.html (The SAX License)
-	License:	http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/java-binding.zip (The W3C License)
-	Homepage:	http://xml.apache.org/commons/components/external/
-
-This product depends on XmlBeans 2.4
+This product depends on XmlBeans 2.4.0
 
 	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
 	Homepage:	http://xmlbeans.apache.org
 
-This product depends on XML Pull Parsing API 1.1
+This product depends on Bouncy Castle Provider 1.53
 
-	License:	http://www.xmlpull.org/v1/download/unpacked/LICENSE.txt (Public Domain)
-	Homepage:	http://www.xmlpull.org
+	License:	http://www.bouncycastle.org/licence.html (Bouncy Castle Licence)
+	Homepage:	http://www.bouncycastle.org/java.html
 
-This product depends on MXP1: Xml Pull Parser 3rd Edition (XPP3) 1.1
+This product depends on Stax2 API 3.1.4
+
+	License:	http://www.opensource.org/licenses/bsd-license.php (The BSD License)
+	Homepage:	http://wiki.fasterxml.com/WoodstoxStax2
+
+This product depends on Woodstox 4.4.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://woodstox.codehaus.org
+
+This product depends on Cryptacular Library 1.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
+	Homepage:	http://www.cryptacular.org
+
+This product depends on hawtbuf 1.10
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://hawtbuf.fusesource.org/hawtbuf
+
+This product depends on Hamcrest Core 1.3
+
+	License:	http://www.opensource.org/licenses/bsd-license.php (New BSD License)
+	Homepage:	https://github.com/hamcrest/JavaHamcrest/hamcrest-core
+
+This product depends on HdrHistogram 1.2.1
+
+	License:	http://creativecommons.org/publicdomain/zero/1.0/ (Public Domain, per Creative Commons CC0)
+	Homepage:	http://hdrhistogram.github.io/HdrHistogram/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on Smack 4.2.0-beta1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/smack/
+
+This product depends on JDOM 1.1
+
+	License:	https://github.com/hunterhacker/jdom/blob/master/LICENSE.txt (JDOM License)
+	Homepage:	http://www.jdom.org/
+
+This product depends on JSON (JavaScript Object Notation) 20090211
+
+	License:	http://www.json.org/license.html (provided without support or warranty)
+	Homepage:	http://www.json.org/java/index.html
+
+This product depends on JXMPP 0.5.0-alpha7
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/jxmpp/
+
+This product depends on JXMPP 0.5.0-alpha7
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/jxmpp/
+
+This product depends on JXMPP 0.5.0-alpha7
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://www.igniterealtime.org/projects/jxmpp/
+
+This product depends on Kaazing Corporation License 2.18
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	https://github.com/kaazing/community
+
+This product depends on k3po/lang 3.0.0-alpha-80
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	https://github.com/kaazing/k3po
+
+This product depends on SNMP4J 1.11.3
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
+	Homepage:	https://github.com/kaazing/snmp4j
+
+This product depends on SNMP4J-Agent 1.4.3
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (Apache 2)
+	Homepage:	https://github.com/kaazing/snmp4j.agent
+
+This product depends on TURN Protocol Specification 3.0.0-alpha-80
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	https://github.com/k3po/specification.turn
+
+This product depends on OpenSAML :: Core 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-core/
+
+This product depends on OpenSAML :: Messaging API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-messaging-api/
+
+This product depends on OpenSAML :: Messaging Implementations 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-messaging-impl/
+
+This product depends on OpenSAML :: Profile API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-profile-api/
+
+This product depends on OpenSAML :: SAML Provider API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-saml-api/
+
+This product depends on OpenSAML :: SAML Provider Implementations 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-saml-impl/
+
+This product depends on OpenSAML :: Security API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-security-api/
+
+This product depends on OpenSAML :: Security Implementation 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-security-impl/
+
+This product depends on OpenSAML :: SOAP Provider API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-soap-api/
+
+This product depends on OpenSAML :: SOAP Provider Implementations 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-soap-impl/
+
+This product depends on OpenSAML :: Storage API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-storage-api/
+
+This product depends on OpenSAML :: XML Security API 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-xmlsec-api/
+
+This product depends on OpenSAML :: XML Security Implementation 3.2.0
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://shibboleth.net/opensaml-xmlsec-impl/
+
+This product depends on SLF4J API Module 1.7.21
+
+	License:	http://www.opensource.org/licenses/mit-license.php (MIT License)
+	Homepage:	http://www.slf4j.org
+
+This product depends on SLF4J LOG4J-12 Binding 1.7.21
+
+	License:	http://www.opensource.org/licenses/mit-license.php (MIT License)
+	Homepage:	http://www.slf4j.org
+
+This product depends on jedis 2.8.1-PSFix
+
+	License:	https://github.com/xetorthio/jedis/blob/master/LICENSE.txt (Jedis Licence)
+	The project URL is not included in this dependency's pom, and thus could not be referenced here.
+
+This product depends on StAX API 1.0.1
+
+	License:	http://www.apache.org/licenses/LICENSE-2.0.txt (The Apache Software License, Version 2.0)
+	Homepage:	http://stax.codehaus.org/
+
+This product depends on MXP1: Xml Pull Parser 3rd Edition (XPP3) 1.1.4c
 
 	License:	http://www.extreme.indiana.edu/viewcvs/~checkout~/XPP3/java/LICENSE.txt (Indiana University Extreme! Lab Software License, vesion 1.1.1)
 	License:	http://creativecommons.org/licenses/publicdomain (Public Domain)
 	License:	http://www.apache.org/licenses/LICENSE-1.1 (Apache Software License, version 1.1)
 	Homepage:	http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/
-
-This product depends on MXP1: Xml Pull Parser 3rd Edition (XPP3) 1.1
-
-	License:	http://www.extreme.indiana.edu/viewcvs/~checkout~/XPP3/java/LICENSE.txt (Indiana University Extreme! Lab Software License, vesion 1.1.1)
-	License:	http://creativecommons.org/licenses/publicdomain (Public Domain)
-	Homepage:	http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/
-
-This product depends on XStream Core 1.4
-
-	License:	http://xstream.codehaus.org/license.html (BSD style)
-	Homepage:	http://codehaus.org/xstream-parent/xstream/
-
-This product depends on opencsv 2.3
-
-	License:	http://opencsv.sourceforge.net/license.html (The Apache License, Version 2.0)
-	Homepage:	http://opencsv.sourceforge.net/
 

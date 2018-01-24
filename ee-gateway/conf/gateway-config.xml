@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
 
-    Copyright 2007-2016, Kaazing Corporation. All rights reserved.
+    Copyright 2007-2017, Kaazing Corporation. All rights reserved.
 
 -->
 <gateway-config xmlns="http://xmlns.kaazing.org/2016/06/gateway">
@@ -107,13 +107,6 @@
   </service>
 
 
-  <service>
-    <name>Update Checker</name>
-    <description>Checks to see if a newer version of the Gateway is available</description>
-    <type>update.check</type>
-  </service>
-
-
   <security>
 
     <keystore>
@@ -129,6 +122,8 @@
     <realm>
       <name>demo</name>
       <description>Sample realm for file-based authentication</description>
+
+      <user-principal-class>org.kaazing.gateway.security.auth.config.UserConfig</user-principal-class>
 
       <authentication>
         <http-challenge-scheme>Application Basic</http-challenge-scheme>
